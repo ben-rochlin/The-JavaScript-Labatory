@@ -5,17 +5,16 @@
 const string = "The quick brown fox ju over the lazy dog."
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-const process = (str) => {
+const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-  
+const isPangram = (str) => {
     for ( let letter of alphabet.split('')){
         console.log(letter)
-        if (str.includes(letter) === false){
+        if (str.toLowerCase().includes(letter) === false){
             return false
-            continue
         }
-        else return true
     }
+  return true
 }
 
-console.log(process(string))
+console.log(isPangram(string))
